@@ -1,0 +1,12 @@
+public class MinimumAndMaximum {
+    public static void main(String[] args) {
+        int array[]={1,2,3,4,2,4,63,6,8};
+        int maximum=array[0];
+        for(int i=0;i<array.length;i++){
+            if(array[i]>maximum){
+                maximum=array[i];
+            }
+        }
+        System.out.println("The maximum element in the array is:"+maximum);
+    }
+}
