@@ -1,0 +1,33 @@
+import java.util.Arrays;
+import java.util.Collections;
+
+public class sort_0_1_2 {
+    public static void main(String[] args) {
+        int arr[]={0,1,2,0,0,0,2,2,2,1,1,2,0,1,0,2};
+//        Arrays.sort(arr);------>>>>>approach-1
+//        System.out.println(Arrays.toString(arr));
+        int coun0=0;
+        int count1=0;
+        int count2=0;
+        for(int i=0;i< arr.length;i++){
+            if(arr[i]==0){
+                coun0++;
+            } else if (arr[i]==1) {
+                count1++;
+            }else {
+                count2++;
+            }
+        }
+        for(int i=0;i<coun0;i++){
+            arr[i]=0;
+        }
+        for(int i=coun0;i<coun0+count1;i++){
+            arr[i]=1;
+        }
+        for(int i=coun0+count1;i<coun0+count1+count2;i++){
+            arr[i]=2;
+        }
+
+        System.out.println(Arrays.toString(arr));
+    }
+}
